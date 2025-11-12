@@ -7,19 +7,56 @@
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-o8Az1Q3p+8wUgu5t77+fW/Uu32gYIF6f57nLV0M5w0c="
-    crossorigin=""/>
+    integrity="sha256-o8Az1Q3p+8wUgu5t77+fW/Uu32gYIF6f57nLV0M5w0c=" crossorigin=""/>
 
   <style>
-    body { margin:0; padding:0; font-family: sans-serif; }
-    #map { height: 80vh; width: 100%; }
-    #buttons { padding: 10px; text-align: center; }
-    #buttons button { font-size: 16px; margin: 5px; padding: 8px 12px; }
+    /* Reset margini e padding */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+    /* Mappa Leaflet */
+    #map {
+      height: 80vh;  /* 80% dell'altezza della finestra */
+      width: 100%;
+    }
+
+    /* Sezione pulsanti */
+    #buttons {
+      padding: 10px;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+
+    #buttons button {
+      font-size: 16px;
+      margin: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.2s;
+    }
+
+    #buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Titolo centrato */
+    h1 {
+      text-align: center;
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
 
-  <h1 style="text-align:center;">Segnalazioni Italia</h1>
+  <h1>Segnalazioni Italia</h1>
 
   <div id="map"></div>
 
@@ -30,8 +67,7 @@
 
   <!-- Libreria Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-o8Az1Q3p+8wUgu5t77+fW/Uu32gYIF6f57nLV0M5w0c="
-    crossorigin=""></script>
+    integrity="sha256-o8Az1Q3p+8wUgu5t77+fW/Uu32gYIF6f57nLV0M5w0c=" crossorigin=""></script>
 
   <!-- Libreria Supabase JS -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
