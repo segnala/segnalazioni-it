@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Segnalazioni Italia</title>
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segnalazioni Italia</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-o8Az1Q3p+8wUgu5t77+fW/Uu32gYIF6f57nLV0M5w0c="
+    crossorigin=""/>
+
+  <style>
+    body { margin:0; padding:0; font-family: sans-serif; }
+    #map { height: 80vh; width: 100%; }
+    #buttons { padding: 10px; text-align: center; }
+    #buttons button { font-size: 16px; margin: 5px; padding: 8px 12px; }
+  </style>
 </head>
 <body>
-  <h1>Segnalazioni Italia</h1>
 
-<div id="map" style="height:80vh;"></div>
+  <h1 style="text-align:center;">Segnalazioni Italia</h1>
 
-<div id="buttons">
-  <button onclick="setTipo('incidente')">Incidenti</button>
-  <button onclick="setTipo('alert')">🚨</button>
-</div>
+  <div id="map"></div>
 
-<!-- Libreria Supabase -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <div id="buttons">
+    <button onclick="setTipo('incidente')">Incidenti</button>
+    <button onclick="setTipo('alert')">🚨</button>
+  </div>
 
-<!-- Il tuo file JavaScript principale -->
-<script src="app.js"></script>
+  <!-- Libreria Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o8Az1Q3p+8wUgu5t77+fW/Uu32gYIF6f57nLV0M5w0c="
+    crossorigin=""></script>
+
+  <!-- Libreria Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Il tuo file JavaScript principale -->
+  <script src="app.js"></script>
 
 </body>
 </html>
-
