@@ -1,3 +1,8 @@
+// Inizializza Supabase
+const supabaseUrl = 'https://vzlmrgbffcehypauasos.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6bG1yZ2JmZmNlaHlwYXVhc29zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5NzUwMzMsImV4cCI6MjA3ODU1MTAzM30.Q2V9UXAQ-9pWoswM-_3s6aKgGc11sarxbZCuuK2IE3g';
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
 // Controlla se il browser supporta la geolocalizzazione
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
