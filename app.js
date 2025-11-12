@@ -1,3 +1,22 @@
+// Controlla se il browser supporta la geolocalizzazione
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      // Centra la mappa sulla posizione dell'utente
+      map.setView([lat, lon], 25); // zoom più vicino
+    },
+    (error) => {
+      console.error("Errore geolocalizzazione:", error);
+      alert("Impossibile ottenere la tua posizione. La mappa resterà centrata sull'Italia.");
+    }
+  );
+} else {
+  alert("Il tuo browser non supporta la geolocalizzazione.");
+}
+
 // Config Firebase
 const firebaseConfig = {
   apiKey: "LA_TUA_API_KEY",
